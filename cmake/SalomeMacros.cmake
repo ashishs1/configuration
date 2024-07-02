@@ -164,7 +164,7 @@ MACRO(SALOME_INSTALL_SCRIPTS file_list path)
     ENDIF(ext STREQUAL .py)
 
   # get relative path (from CMAKE_SOURCE_DIR to CMAKE_CURRENT_SOURCE_DIR)
-  STRING(REGEX REPLACE ${CMAKE_SOURCE_DIR} "" rel_dir ${CMAKE_CURRENT_SOURCE_DIR})
+  FILE(RELATIVE_PATH rel_dir ${CMAKE_SOURCE_DIR} ${CMAKE_CURRENT_SOURCE_DIR})
   # convert "/" to "_"
   IF(rel_dir)
     STRING(REGEX REPLACE "/" "_" unique_name ${rel_dir})
