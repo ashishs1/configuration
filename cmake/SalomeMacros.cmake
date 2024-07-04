@@ -449,6 +449,9 @@ MACRO(SALOME_FIND_PACKAGE englobPkg stdPkg mode)
       ELSE()
         FIND_PACKAGE(${stdPkg} ${${englobPkg}_FIND_VERSION} ${_tmp_exact} 
               MODULE ${_tmp_quiet} ${_tmp_req})
+        IF(NOT ${stdPkg}_FOUND)
+          FIND_PACKAGE(${stdPkg} CONFIG)
+        ENDIF()
       ENDIF()
       
     ELSE()
