@@ -6,6 +6,7 @@ atomsolv:cea,edf
 blsurfplugin:cea,edf
 calculator:cea,edf
 canrecplugin:occ
+commongeomlib:cea,edf
 component:cea,edf
 configuration:cea,edf
 documentation:cea,edf
