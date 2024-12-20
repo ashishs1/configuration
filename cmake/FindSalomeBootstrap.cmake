@@ -18,17 +18,6 @@
 # See http://www.salome-platform.org/ or email : webmaster.salome@opencascade.com
 #
 
-IF(NOT SalomeBootstrap_FIND_QUIETLY)
-  MESSAGE(STATUS "Looking for Salome Bootstrap ...")
-ENDIF()
-
-SET(CMAKE_PREFIX_PATH "${SALOMEBOOTSTRAP_ROOT_DIR}/__RUN_SALOME__")
-SALOME_FIND_PACKAGE(SalomeBootstrap SalomeBootstrap CONFIG)
-
-IF(NOT SalomeBootstrap_FIND_QUIETLY)
-  MESSAGE(STATUS "Found Salome Bootstrap: ${SALOMEBOOTSTRAP_ROOT_DIR}")
-ENDIF()
-
 IF (NOT SALOMEPYTHONINTERP_FOUND)
   MESSAGE(STATUS "Loading SALOME Python environment")
   FIND_PACKAGE(SalomePythonInterp REQUIRED)
